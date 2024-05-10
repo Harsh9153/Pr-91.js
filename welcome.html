@@ -10,7 +10,7 @@
 
 
   <link rel="stylesheet" href="login-2.html">
-  <!-- <link rel="stylesheet" href="css/login.css"> -->
+
 
 </head>
 <style>
@@ -244,7 +244,6 @@ input[type="submit"]:active
           <div class="inputBox">
 
             <!-- <input type="submit"  onclick="submit()"> -->
-            <button type="submit" onclick="submit()" value="Login"><a href="login.html">submit</a></button><br><br>
 
           </div>
         </div>
@@ -254,27 +253,7 @@ input[type="submit"]:active
     </div>
 
   </section>
-  <script>
-    function submitt() {
-      let npassword = document.getElementById("npassword").value
-      let cpassword = document.getElementById("cpassword").value
-
-
-      if (npassword == cpassword) {
-        document.getElementById("err").innerHTML = "correct password"
-        document.getElementById("err").style.color = "green"
-
-
-      }
-      else {
-        document.getElementById("err").innerHTML = "wrong password"
-        document.getElementById("err").style.color = "red"
-      }
-
-
-    }
-  </script>
-
+  
 </body>
 
 </html>
