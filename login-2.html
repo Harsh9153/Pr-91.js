@@ -1,373 +1,169 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-
-    <meta charset="UTF-8">
-
-    <title>HRD</title>
-
-    <!-- <link rel="stylesheet" href="./style.css"> -->
-    <!-- <link rel="stylesheet" href="login.css"> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HRD</title>
 
 </head>
 <style>
-    .signin .content .form .inputBox button[type="submit"] {
-        padding: 10px;
-        background: #0f0;
-        color: #000;
-        font-weight: 600;
-        font-size: 1.35em;
-        letter-spacing: 0.05em;
-        cursor: pointer;
-
-    }
-    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-*
-{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Quicksand', sans-serif;
-}
-body 
-{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #000;
-}
-section 
-{
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2px;
-  flex-wrap: wrap;
-  overflow: hidden;
-}
-section::before 
-{
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(#000,#0f0,#000);
-  animation: animate 5s linear infinite;
-}
-@keyframes animate 
-{
-  0%
-  {
-    transform: translateY(-100%);
+  html {
+    height: 100%;
   }
-  100%
-  {
-    transform: translateY(100%);
+  body {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background-image: url(img.jpg.jpg);
   }
-}
-section span 
-{
-  position: relative;
-  display: block;
-  width: calc(6.25vw - 2px);
-  height: calc(6.25vw - 2px);
-  background: #181818;
-  z-index: 2;
-  transition: 1.5s;
-}
-section span:hover 
-{
-  background:rgba(199, 60, 60, 0.358);
-  transition: 0s;
-}
-
-section .signin
-{
-  position: absolute;
-  width: 400px;
-  background: #222;  
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
-  border-radius: 4px;
-  box-shadow: 0 15px 35px rgba(0,0,0,9);
-}
-section .signin .content 
-{
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 40px;
-}
-section .signin .content h2 
-{
-  font-size: 2em;
-  color: #0f0;
-  text-transform: uppercase;
-}
-section .signin .content .form 
-{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-section .signin .content .form .inputBox
-{
-  position: relative;
-  width: 100%;
-}
-section .signin .content .form .inputBox input 
-{
-  position: relative;
-  width: 100%;
-  background: #333;
-  border: none;
-  outline: none;
-  padding: 25px 10px 7.5px;
-  border-radius: 4px;
-  color: #fff;
-  font-weight: 500;
-  font-size: 1em;
-}
-section .signin .content .form .inputBox i 
-{
-  position: absolute;
-  left: 0;
-  padding: 15px 10px;
-  font-style: normal;
-  color: #aaa;
-  transition: 0.5s;
-  pointer-events: none;
-}
-.signin .content .form .inputBox input:focus ~ i,
-.signin .content .form .inputBox input:valid ~ i
-{
-  transform: translateY(-7.5px);
-  font-size: 0.8em;
-  color: #fff;
-}
-.signin .content .form .links 
-{
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-.signin .content .form .links a 
-{
-  color: #fff;
-  text-decoration: none;
-}
-.signin .content .form .links a:nth-child(2)
-{
-  color: #0f0;
-  font-weight: 600;
-}
-.signin .content .form .inputBox input[type="submit"]
-{
-  padding: 10px;
-  background: #0f0;
-  color: #000;
-  font-weight: 600;
-  font-size: 1.35em;
-  letter-spacing: 0.05em;
-  cursor: pointer;
-}
-input[type="submit"]:active
-{
-  opacity: 0.6;
-}
-@media (max-width: 900px)
-{
-  section span 
-  {
-    width: calc(5vw - 2px);
-    height: calc(5vw - 2px);
+  
+  .login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
   }
-}
-@media (max-width: 600px)
-{
-  section span 
-  {
-    width: calc(10vw - 2px);
-    height: calc(10vw - 2px);
+  
+  .login h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #17c3e1cb;
+    text-align: center;
   }
-}
+  
+  .login .user {
+    position: relative;
+  }
+  
+  .login .user input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 20px;
+    border-bottom: 1px solid gray;
+    outline: none;
+    background: transparent;
+  }
+  .login .user label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .login .user input:focus ~ label,
+  .login .user input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #a3e20f8d;
+    font-size: 16px;
+  }
+  
+  .form-link{
+    /* position: relative; */
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .2s;
+    /* margin-top: 40px;     */
+    letter-spacing: 4px
+  }
+  
+  .form-link:hover {
+    background: #698282;
+    color:white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #062628,
+  }
+  
+  
 </style>
-
-<body> <!-- partial:index.partial.html -->
-
-    <section> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-        <span></span> <span></span> <span></span> <span></span> <span></span>
-
-        <div class="signin">
-
-            <div class="content">
-
-                <h2>Sign In</h2>
-
-                <div class="form">
-
-                    <div class="inputBox">
-
-                        <input type="text" id="username" required> <i>Username</i>
-
-                    </div>
-
-                    <div class="inputBox">
-
-                        <input type="email" name="email" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"> <i>Email</i>
-
-
-                    </div>
-
-                    <div class="inputBox">
-
-                        <input type="password" required id="password"> <i> password</i>
-                        <p id="err4"></p>
-
-                    </div>
-
-                    <div class="inputBox">
-
-                        <input type="password" required id="cnfrm-password"> <i>Confome Password</i>
-
-                    </div>
-                    <p id="message"></p>
-
-                    <div class="links"> <a href="login.html">Forgot Password</a> <a href="#">Signup</a>
-
-                    </div>
-
-                    <div class="inputBox">
-
-                        <!-- <input type="submit"  onclick="submit()"> -->
-                        <button type="submit" onclick="submit()" value="Login"><a href="welcome.html">submit</a></button><br><br>
-
-                    </div>
-
-                </div>
-
-            </div>
-
+<body>
+  <div class="login">
+    <h2>Velediction Form</h2>
+      <form action="" id="form">
+        <div class="user">
+          <input type="text" id="username">
+          <label>Username</label>
+          <p id="e1" style="color: red; margin-top: 2px;"></p>
         </div>
+        <div class="user">
+          <input type="email"id="email">
+          <label>Email</label>
+          <p id="e2" style="color: red; margin-top: 2px;"></p>
+        </div>
+        <div class="user">
+          <input type="password" id="password">
+          <label>Password</label>
+          <p id="e3" style="color: red; margin-top: 2px;"></p>
+        </div>
+        <div class="user">
+          <input type="password" id="confirm-password">
+          <label>confirm Password</label>
+          <p id="e4" style="color: red; margin-top: 2px;"></p>
+        </div>
+        <p id="para5" style="color: red; margin-top: 2px;"></p>
+        <a href="#" class="form-link" onclick="Submit()">Submit</a>
+      </form>
+    </div>
+  </div>
 
-    </section> <!-- partial -->
-
-
-    <script>
-        let arr = JSON.parse(localStorage.getItem("data")) || []
-        function submit() {
-            let username = document.getElementById("username").value
-            let email = document.getElementById("email").value
-            let password = document.getElementById("password").value
-            let cnfrmPassword = document.getElementById("cnfrm-password").value;
-            let message = document.getElementById("message");
-            let tbody = document.getElementById("tbody")
-
-            if(username<6)
-            {
-                alert("username length must be atleast 8 characters");
-
-            }
-            if (password.length < 8) {
-                //    let p= document.getElementById("error").innerHTML="correct password"
-                alert("Password length must be atleast 8 characters");
-                // document.getElementById("err").innerHTML = "please enter username"
-                // document.getElementById("err").style.color = "red"
-
-
-            }
-            if (password.length > 16) {
-                //    let p= document.getElementById("error").innerHTML="correct password"
-                alert("Password length must not exceed 16 characters");
-                // document.getElementById("err").innerHTML = "Password length must not exceed 15 characters"
-                // document.getElementById("err").style.color = "red"
-
-
-            }
-            else {
-
-
-                let obj = {
-                    username,
-                    email,
-                    password,
-                }
-
-                arr.push(obj)
-                localStorage.setItem("data", JSON.stringify(arr))
-                console.log(obj);
-                location.reload();
-            }
-
-         
-
-        }
-
-
-        // function loddata() {
-        //     arr.map((val, index) => {
-        //         let tr = document.createElement("tr")
-        //         tr.innerHTML = `
-        //         <td>${val.username}</td>
-        //         <td>${val.Email}</td>
-        //         <td>${val.password}</td> `;
-        //         tbody.appendChild(tr)
-
-        //     });
-
-        // }
-        // loddata();
-
-
-
-    </script>
-
-
+  <script>
+    function Submit() {
+    let username= document.getElementById("username").value;
+    let email= document.getElementById("email").value;
+    let passsword= document.getElementById("password").value;
+    let confirmPasssword= document.getElementById("confirm-password").value;
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (username == "") {
+        let res1 = document.getElementById("e1");
+        res1.innerHTML="Username required" 
+    }
+    else if (email=="" ) {
+        let res2 = document.getElementById("e2");
+        res2.innerHTML="Email cannot blank";
+    }
+    else if (!emailRegex.test(email)) {
+        let res2 = document.getElementById("e2");
+        res2.innerHTML="Enter proper Email"; 
+    } 
+    else if ((passsword=="")) {
+      let res3 = document.getElementById("e3");
+     res3.innerHTML="Enter valid password";
+    }
+    else if (passsword.length<6 || passsword.length>16) {
+        let res3 = document.getElementById("e3");
+        res3.innerHTML=" must contain 6 character";
+    }
+   else if(confirmPasssword != passsword) {
+        let res4 = document.getElementById("e4");
+        res4.innerHTML="Password must be same";
+        res4.style.color="red";
+    }
+    else{
+        let res4 = document.getElementById("e4");
+        res4.innerHTML=" login success";
+        res4.style.color="green";
+        window.location.replace("login.html"); 
+    } 
+}
+  </script>
 </body>
 
 </html>
